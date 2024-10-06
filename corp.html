@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateWeb Systems</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/images/logotipo.png">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/catalogo.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .carousel-caption {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .carousel-caption span {
+            color: #ff8f33;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: "Lexend";
+            font-size: 1.1em;
+            line-height: 50px;
+        }
+
+        .carousel-caption h3 {
+            color: #ffffff;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 2em;
+            font-style: italic;
+            width: 100%;
+            font-family: "Poppins";
+        }
+
+        .card-title {
+            font-size: 1em !important;
+        }
+
+        .carousel-caption p a:hover {
+            background-color: #202020;
+            color: #ff8f33;
+        }
+
+        .dark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.856);
+            z-index: 1;
+        }
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 30px;
+            }
+
+            .catalog .filter {
+                display: flex !important;
+            }
+            .catalog-text{
+                padding: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="precarga">
+        <p class="texto-carga" style="display: flex;align-items: center;justify-content: center;">
+            <span><img style="width: 150px;" src="assets/images/logotipo.png"
+                    alt=""></span><span>C</span><span>W</span><span>S</span>
+        </p>
+    </div>
+
+    <div id="principal" style="padding: 0; margin: 0; width: 100%;display: none;">
+        <div class="header-menu">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4 container-menu">
+                    <div class="menu-links">
+                        <a href="index.html"><i class='bx bx-home-alt'></i> Inicio</a>
+                        <a href="catalogo.html"><i class='bx bx-grid-alt'></i> Catalogo</a>
+                        <a href="#categories"><i class='bx bx-category-alt'></i> Categorias</a>
+                        <a href="contact.html"><i class='bx bx-phone'></i> Contacto</a>
+                    </div>
+                    <div class="menu-social-links">
+                        <a href="https://www.instagram.com/createweb.systems/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.facebook.com/create.web.systems?mibextid=ZbWKwL"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="https://www.tiktok.com/@createweb_systems"><i class='bx bxl-tiktok'></i></a>
+                        <a href="https://www.youtube.com/@CreateWeb.Systems"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid" style="display: flex;">
+                    <a href="index.html"><img class="menu-logo" style="width: 100px" src="assets/images/logo.png"
+                            alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <header class="header" id="header">
+            <div class="container header-container" data-aos="fade-zoom-in" data-aos-duration="1500">
+                <div class="row">
+                    <div class="col-md-4" style="width: 20%;">
+                        <div class="logo">
+                            <a href="index.html"><img style="text-align: center;" src="assets/images/logo.png"
+                                    alt="este es el logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="width: 60%; justify-content: center;">
+                        <nav class="navbar">
+                            <ul class="navbar-nav">
+                                <li><a href="index.html"><i class='bx bx-home-alt'></i> Inicio</a></li>
+                                <li><a href="catalogo.html"><i class='bx bx-grid-alt'></i> Catalogo</a></li>
+                                <li><a href="#categories"><i class='bx bx-category-alt'></i> Categorias</a></li>
+                                <li><a href=""><i class='bx bx-phone'></i> Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-4" style="width: 20%;">
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/createweb.systems/"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.facebook.com/create.web.systems?mibextid=ZbWKwL"><i
+                                    class='bx bxl-facebook'></i></a>
+                            <a href="https://www.tiktok.com/@createweb_systems"><i class='bx bxl-tiktok'></i></a>
+                            <a href="https://www.youtube.com/@CreateWeb.Systems"><i class='bx bxl-youtube'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+            style="background-color: black;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="height: 50vh; object-fit: cover;" src="assets/images/background1.jpg"
+                        class="d-block w-100">
+                    <div class="dark-overlay"></div>
+                    <div class="carousel-caption">
+                        <span>Create Web Systems</span><br>
+                        <h3>Categorias <b style="font-weight: 200;">/</b> Corporativo</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog" style="background-color: #ddd; padding: 100px 0;">
+            <!-- Filtro de categorías -->
+            <div class="container mt-5 filter catalog-text" style="max-width: 1500px;">
+                <h2 class="mb-4">Corporativo</h2>
+            </div>
+
+            <!-- Catálogo -->
+            <div class="container" style="max-width: 1500px;">
+                <div class="row">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Global1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Global-mobile.png" class="card-img-top"
+                                    alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Agencia de Viajes</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/Global-Horizon-Travel/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info landing show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Everguard1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Everguard-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Seguros de vida</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span style="margin-top: 2px;" class="badge bg-primary">Landing Page</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/EverGuard/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info tienda show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Sweet Eden1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Sweet_Eden-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pasteleria</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span style="margin-top: 2px;" class="badge bg-danger">Eecommerce</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/SweetEden/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Max-Strength1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Max-Strength-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Gimnasio</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/Max-Strength/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/DineDivine1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/DineDivine-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Restaurante</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/DineDivine/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/LushFeast1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/LushFeast-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Restaurante Vegano</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/LushFeast/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info portf show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/NetGen1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Nextgen-mobile.png" class="card-img-top"
+                                    alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Agencia Digital</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span style="margin-top: 2px;" class="badge bg-warning">Portafolio</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/NextGen/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Prime_Feast1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Prime_Feast-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Comida Rapida</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/Prime-Feast/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info portf tienda show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Portfolio1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Portfolio-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Agencia de Fotografia</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-warning">Portafolio</span>
+                                </div>
+                                <a href="https://anthonymontoyadv.github.io/Portfolio3/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 10 -->
+                    <!-- <div class="col-md-3 mb-4 filterDiv info tienda show">
+                    <div class="card h-100">
+                        <div class="catalog-img" style="display: flex;gap: 5px;">
+                            <img class="catalog-dekstop" src="assets/images/EasyShop1.png" class="card-img-top"
+                                alt="Producto 1">
+                            <img class="catalog-mobile" src="assets/images/EasyShop-mobile.png" class="card-img-top"
+                                alt="Producto 1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Tienda Virtual</h5>
+                            <div class="catalog-categories">
+                                <span class="badge bg-dark">Categoria</span>
+                                <span class="badge bg-danger">Eecommerce</span>
+                                <span class="badge bg-success">Informativa</span>
+                            </div>
+                                Permite mostrar productos y brindar una experiencia de compra fácil para los clientes.
+                            </p>
+                            <a style="margin-top: 10px;" href="#" class="btn view-all">Ver Sitio Web</a>
+                        </div>
+                    </div>
+                </div> -->
+
+                    <!-- Tarjeta 11-->
+                    <!-- <div class="col-md-3 mb-4 filterDiv info tienda show">
+                    <div class="card h-100">
+                        <div class="catalog-img" style="display: flex;gap: 5px;">
+                            <img class="catalog-dekstop" src="assets/images/Luxe_Attire1.png" class="card-img-top"
+                                alt="Producto 1">
+                            <img class="catalog-mobile" src="assets/images/Luxe_Attire-mobile.png" class="card-img-top"
+                                alt="Producto 1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Tienda Virtual</h5>
+                            <div class="catalog-categories">
+                                <span class="badge bg-dark">Categoria</span>
+                                <span class="badge bg-danger">Eecommerce</span>
+                                <span class="badge bg-success">Informativa</span>
+                            </div>
+                                ofrece experiencia de compra excepcional para clientes.</p>
+                            <a style="margin-top: 10px;" href="#" class="btn view-all">Ver Sitio Web</a>
+                        </div>
+                    </div>
+                </div> -->
+
+                    <!-- Tarjeta 12 -->
+                    <!-- <div class="col-md-3 mb-4 filterDiv info landing show">
+                    <div class="card h-100">
+                        <div class="catalog-img" style="display: flex;gap: 5px;">
+                            <img class="catalog-dekstop" src="assets/images/StartUp1.png" class="card-img-top"
+                                alt="Producto 1">
+                            <img class="catalog-mobile" src="assets/images/StartUp-mobile.png" class="card-img-top"
+                                alt="Producto 1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Landing Page</h5>
+                            <div class="catalog-categories">
+                                <span class="badge bg-dark">Categoria</span>
+                                <span class="badge bg-primary">Landing Page</span>
+                                <span class="badge bg-success">Informativa</span>
+                            </div>
+                                el primer momento. Ideal para promocionar campañas, productos o servicios de forma
+                                efectiva.
+                            </p>
+                            <a style="margin-top: 10px;" href="#" class="btn view-all">Ver Sitio Web</a>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container" style="max-width: 1500px;">
+                <div class="row footer-content" data-aos="fade-up">
+                    <div class="col-md-3">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="important">
+                            <h3>ENLACES</h3>
+                            <ul>
+                                <li><a href="catalogo.html"><i class='bx bxs-chevron-right'></i> Catalogo</a></li>
+                                <li><a href="#categories"><i class='bx bxs-chevron-right'></i> Categorias</a></li>
+                                <li><a href="contact.html"><i class='bx bxs-chevron-right'></i> Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="links">
+                            <h3>SIGUENOS</h3>
+                            <div class="social">
+                                <a href="https://www.instagram.com/createweb.systems/"><i
+                                        class='bx bxl-instagram'></i></a>
+                                <a href="https://www.facebook.com/create.web.systems?mibextid=ZbWKwL"><i
+                                        class='bx bxl-facebook'></i></a>
+                                <a href="https://www.tiktok.com/@createweb_systems"><i class='bx bxl-tiktok'></i></a>
+                                <a href="https://www.youtube.com/@CreateWeb.Systems"><i class='bx bxl-youtube'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="email-us">
+                            <h3>Coctactanos</h3>
+                            <div class="whatsapp">
+                                <a href="https://wa.me/+51923063096?text=Hola,%20te%20gustaría%20obtener%20más%20información?"
+                                    target="_blank"><i class='bx bxl-whatsapp'></i>+51 923063096</a>
+                                <a href="mailto:createweb.systems@gmail.com" target="_blank"><i
+                                        class='bx bx-envelope'></i>createweb.systems@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row links">
+                    <div class="col-md-4" style="text-align: center;border-right: 1px solid #afafaf;">
+                        <div class="terms">
+                            <a href="terminos.html" target="_blank">
+                                <h4>Términos y Condiciones</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" style="text-align: center;border-right: 1px solid #afafaf;"">
+                <div class=" privacy">
+                        <a href="politica.html" target="_blank">
+                            <h4>Politica de Privacidad</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4" style="text-align: center;">
+                    <div class="help">
+                        <a href="https://wa.me/+51923063096?text=Hola,%20te%20gustaría%20obtener%20más%20información?"
+                            target="_blank">
+                            <h4>Ayuda</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            var precarga = document.getElementById("precarga");
+            var principal = document.getElementById("principal");
+
+            setTimeout(function () {
+                precarga.style.display = "none";
+                principal.style.display = "block";
+
+                AOS.init();
+
+            }, 3600);
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateWeb Systems</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/images/logotipo.png">
+    <link rel="stylesheet" href="assets/css/catalogo.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .load {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .load-more {
+            background-color: #ff8f33;
+            color: #202020;
+            border: 2px solid #202020;
+            font-weight: 600;
+            outline: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            transition: ease-in-out .3s, transform .3s;
+        }
+
+        .card-title {
+            font-size: 1em !important;
+        }
+
+        .load-more:hover {
+            background-color: #202020;
+            transform: translateY(10%);
+            color: #ff8f33;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="precarga">
+        <p class="texto-carga" style="display: flex;align-items: center;justify-content: center;">
+            <span><img style="width: 150px;" src="assets/images/logotipo.png"
+                    alt=""></span><span>C</span><span>W</span><span>S</span>
+        </p>
+    </div>
+
+    <div id="principal" style="padding: 0; margin: 0; width: 100%;display: none;">
+        <div class="header-menu">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4 container-menu">
+                    <div class="menu-links">
+                        <a href="index.html"><i class='bx bx-home-alt'></i> Inicio</a>
+                        <a href="catalogo.html"><i class='bx bx-grid-alt'></i> Catalogo</a>
+                        <a href="#categories"><i class='bx bx-category-alt'></i> Categorias</a>
+                        <a href="contact.html"><i class='bx bx-phone'></i> Contacto</a>
+                    </div>
+                    <div class="menu-social-links">
+                        <a href="https://www.instagram.com/createweb.systems/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.facebook.com/create.web.systems?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.tiktok.com/@createweb_systems"><i class='bx bxl-tiktok'></i></a>
+                        <a href="https://www.youtube.com/@CreateWeb.Systems"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid" style="display: flex;">
+                    <a href="index.html"><img class="menu-logo" style="width: 100px" src="assets/images/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <header class="header" id="header">
+            <div class="container header-container" data-aos="fade-zoom-in" data-aos-duration="1500">
+                <div class="row">
+                    <div class="col-md-4" style="width: 20%;">
+                        <div class="logo">
+                            <a href="index.html"><img style="text-align: center;" src="assets/images/logo.png"
+                                    alt="este es el logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="width: 60%; justify-content: center;">
+                        <nav class="navbar">
+                            <ul class="navbar-nav">
+                                <li><a href="index.html"><i class='bx bx-home-alt'></i> Inicio</a></li>
+                                <li><a href="catalogo.html"><i class='bx bx-grid-alt'></i> Catalogo</a></li>
+                                <li><a href="#categories"><i class='bx bx-category-alt'></i> Categorias</a></li>
+                                <li><a href=""><i class='bx bx-phone'></i> Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-4" style="width: 20%;">
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/createweb.systems/"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.facebook.com/create.web.systems?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.tiktok.com/@createweb_systems"><i class='bx bxl-tiktok'></i></a>
+                            <a href="https://www.youtube.com/@CreateWeb.Systems"><i class='bx bxl-youtube'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+            style="background-color: black;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="height: 50vh; object-fit: cover;" src="assets/images/background1.jpg"
+                        class="d-block w-100">
+                    <div class="dark-overlay"></div>
+                    <div class="carousel-caption">
+                        <span>Create Web Systems</span><br>
+                        <h3>Productos <b style="font-weight: 200;">/</b> Catalogo</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog" style="background-color: #ddd; padding: 100px 0;">
+            <!-- Filtro de categorías -->
+            <div class="container mt-5 filter"
+                style="max-width: 1500px; display: flex; align-items: center;justify-content: space-between;">
+                <div class="catalog-text">
+                    <h2 class="mb-4">Catálogo</h2>
+                    <p>¡Bienvenido! Explora nuestro amplio catalogo de sitios web y encuentra la plantilla perfecta que
+                        se
+                        ajuste a tus necesidades</p>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorias Web
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <button style="color: #ffffff;" class="btn view-all mx-2 bg-dark"
+                            onclick="filterSelection('all')">Todos</button>
+                        <button style="color: #ffffff;" class="btn mx-2 bg-secondary"
+                            onclick="filterSelection('corp')">Corporativo</button>
+                        <button style="color: #ffffff;" class="btn mx-2 bg-success"
+                            onclick="filterSelection('info')">Informativo</button>
+                        <button style="color: #ffffff;" class="btn mx-2 bg-primary"
+                            onclick="filterSelection('landing')">Landing Page</button>
+                        <button style="color: #ffffff;" class="btn mx-2 bg-danger"
+                            onclick="filterSelection('tienda')">Eecommerce</button>
+                        <button style="color: #ffffff;" class="btn mx-2 bg-warning"
+                            onclick="filterSelection('portf')">Portafolio</button>
+                        <button style="color: #ffffff;" class="btn mx-2 bg-info"
+                            onclick="filterSelection('blog')">Blog</button>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Catálogo -->
+            <div class="container" style="max-width: 1500px;">
+                <div class="row">
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Global1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Global-mobile.png" class="card-img-top"
+                                    alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Agencia de Viajes</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Esta plantilla fue desarrollada pensando en una Agencia de Viajes,
+                                    ofreciendo una plataforma en línea completa para la planificación y reserva de tus
+                                    próximas
+                                    aventuras.</p>
+                                <a href="https://anthonymontoyadv.github.io/Global-Horizon-Travel/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info landing show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Everguard1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Everguard-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Seguros de vida</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span style="margin-top: 2px;" class="badge bg-primary">Landing Page</span>
+                                </div>
+                                <p class="card-text">Esta plantilla fue creada pensando en una agencia de seguros de
+                                    vida,
+                                    con
+                                    el objetivo de proporcionar una plataforma en línea moderna y eficiente para la
+                                    gestión
+                                    de
+                                    seguros.</p>
+                                <a href="https://anthonymontoyadv.github.io/EverGuard/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info tienda show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Sweet Eden1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Sweet_Eden-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pasteleria</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span style="margin-top: 2px;" class="badge bg-danger">Eecommerce</span>
+                                </div>
+                                <p class="card-text">Este sitio web fue creado para la Pastelería Dulce Encanto,
+                                    ofreciendo
+                                    una
+                                    experiencia en línea que captura la esencia y la pasión por la repostería artesanal.
+                                </p>
+                                <a href="https://anthonymontoyadv.github.io/SweetEden/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Max-Strength1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Max-Strength-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Gimnasio</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                </div>
+                                <p class="card-text">Esta plantilla fue diseñada pensando en un gimnasio, ofreciendo una
+                                    plataforma en línea que facilita a los usuarios la gestión de su salud y bienestar.
+                                </p>
+                                <a href="https://anthonymontoyadv.github.io/Max-Strength/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/DineDivine1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/DineDivine-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Restaurante</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Esta plantilla está diseñada específicamente para ayudarte a crear
+                                    una
+                                    presencia en línea atractiva y funcional que capturará la esencia de tu restaurante
+                                    y
+                                    cautivará a tus clientes.</p>
+                                <a href="https://anthonymontoyadv.github.io/DineDivine/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/LushFeast1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/LushFeast-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Restaurante Vegano</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Plantilla diseñada para resaltar frescura y creatividad de cocina
+                                    vegetariana. Ayuda a construir presencia en línea atractiva y sostenible para atraer
+                                    amantes
+                                    de buena comida y vida saludable.</p>
+                                <a href="https://anthonymontoyadv.github.io/LushFeast/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info portf show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/NetGen1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Nextgen-mobile.png" class="card-img-top"
+                                    alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Agencia Digital</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span style="margin-top: 2px;" class="badge bg-warning">Portafolio</span>
+                                </div>
+                                <p class="card-text">Esta plantilla ha sido diseñada para reflejar la innovación y
+                                    creatividad
+                                    de tu agencia, proporcionando una plataforma que muestra tus servicios de manera
+                                    impactante
+                                    y profesional.</p>
+                                <a href="https://anthonymontoyadv.github.io/NextGen/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv corp info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Prime_Feast1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Prime_Feast-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Comida Rapida</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Diseñada para capturar la esencia de la comida rápida y deliciosa,
+                                    esta
+                                    plantilla te ayudará a establecer una presencia en línea vibrante y atractiva que
+                                    atraerá a
+                                    los amantes de la buena comida rápida.</p>
+                                <a href="https://anthonymontoyadv.github.io/Prime-Feast/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv blog info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Blog1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Blog-mobile.png" class="card-img-top"
+                                    alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Blog Personal</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-info">Blog</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Plantilla para bloggers que facilita compartir pensamientos,
+                                    experiencias y
+                                    pasiones de forma atractiva y accesible, conectando con la audiencia.</p>
+                                <a href="https://anthonymontoyadv.github.io/Blog1/" target="_blank"
+                                    class="btn view-all">Ver
+                                    Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv info tienda show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/EasyShop1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/EasyShop-mobile.png" class="card-img-top"
+                                    alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Tienda Virtual</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-danger">Eecommerce</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Plantilla diseñada para crear una presencia online atractiva y
+                                    profesional.
+                                    Permite mostrar productos y brindar una experiencia de compra fácil para los
+                                    clientes.
+                                </p>
+                                <a href="https://anthonymontoyadv.github.io/EasyShop/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv info tienda show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Luxe_Attire1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Luxe_Attire-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Tienda Virtual</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-danger">Eecommerce</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Plantilla para tienda en línea que mejora usabilidad, atractivo
+                                    visual
+                                    y
+                                    ofrece experiencia de compra excepcional para clientes.</p>
+                                <a href="https://anthonymontoyadv.github.io/Luxe-Attire/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4 filterDiv info landing show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/StartUp1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/StartUp-mobile.png" class="card-img-top"
+                                    alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Landing Page</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-primary">Landing Page</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Plantilla diseñada para maximizar la conversión y captar la
+                                    atención
+                                    desde
+                                    el primer momento. Ideal para promocionar campañas, productos o servicios de forma
+                                    efectiva.
+                                </p>
+                                <a href="https://anthonymontoyadv.github.io/StartUp/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="load">
+                        <button id="load-more-btn" class="load-more">Cargar más...</button>
+                    </div>
+                </div>
+                <div class="row" style="display: none;" id="hidden-products-row">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-md-3 mb-4 filterDiv portf info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Portafolio1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Portafolio-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Desarrolladora Web</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-warning">Portafolio</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Diseñamos plantilla web elegante para destacar talento, habilidades
+                                    y proyectos de desarrolladoras. Perfecta para atraer clientes, empleadores y socios
+                                    interesados.</p>
+                                <a href="https://anthonymontoyadv.github.io/Portafolio2/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="col-md-3 mb-4 filterDiv portf info landing show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Portfolio1.1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Portfolio-mobile1.1.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curriculum Vitae Diseñador Web</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-warning">Portafolio</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Plantilla diseñada para destacar perfil, habilidades y experiencia
+                                    de diseñadores web. Perfecta para cautivar empleadores y clientes con creatividad y
+                                    habilidades técnicas desde el primer vistazo.</p>
+                                <a href="https://anthonymontoyadv.github.io/Portfolio1/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="col-md-3 mb-4 filterDiv corp portf info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Portfolio1.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Portfolio-mobile.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Agencia de Fotografia</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                    <span class="badge bg-secondary">Corporativo</span>
+                                    <span class="badge bg-warning">Portafolio</span>
+                                </div>
+                                <p class="card-text">Plantilla diseñada para profesionales y agencias creativas, ideal
+                                    para fotógrafos, videógrafos y editores de video. Destaca tu trabajo y atrae
+                                    clientes interesados en servicios visuales de alta calidad.</p>
+                                <a href="https://anthonymontoyadv.github.io/Portfolio3/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="col-md-3 mb-4 filterDiv portf info show">
+                        <div class="card h-100">
+                            <div class="catalog-img" style="display: flex;gap: 5px;">
+                                <img class="catalog-dekstop" src="assets/images/Portfolio2.2.png" class="card-img-top"
+                                    alt="Producto 1">
+                                <img class="catalog-mobile" src="assets/images/Portfolio-mobile2.2.png"
+                                    class="card-img-top" alt="Producto 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Curriculum Vitae Desarrollador Junior UI/UX</h5>
+                                <div class="catalog-categories">
+                                    <span class="badge bg-dark">Categoria</span>
+                                    <span class="badge bg-warning">Portafolio</span>
+                                    <span class="badge bg-success">Informativa</span>
+                                </div>
+                                <p class="card-text">Plantilla de CV para desarrolladores junior de UI/UX, destaca
+                                    habilidades y experiencia de manera profesional y visualmente atractiva para captar
+                                    la atención de empleadores y reclutadores en el mundo competitivo del diseño.</p>
+                                <a href="https://anthonymontoyadv.github.io/Portfolio4/" target="_blank"
+                                    class="btn view-all">Ver Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container" style="max-width: 1500px;">
+                <div class="row footer-content" data-aos="fade-up">
+                    <div class="col-md-3">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="important">
+                            <h3>ENLACES</h3>
+                            <ul>
+                                <li><a href="catalogo.html"><i class='bx bxs-chevron-right'></i> Catalogo</a></li>
+                                <li><a href="#categories"><i class='bx bxs-chevron-right'></i> Categorias</a></li>
+                                <li><a href="contact.html"><i class='bx bxs-chevron-right'></i> Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="links">
+                            <h3>SIGUENOS</h3>
+                            <div class="social">
+                                <a href="https://www.instagram.com/createweb.systems/"><i class='bx bxl-instagram'></i></a>
+                                <a href="https://www.facebook.com/create.web.systems?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+                                <a href="https://www.tiktok.com/@createweb_systems"><i class='bx bxl-tiktok'></i></a>
+                                <a href="https://www.youtube.com/@CreateWeb.Systems"><i class='bx bxl-youtube'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="email-us">
+                            <h3>Coctactanos</h3>
+                            <div class="whatsapp">
+                                <a href="https://wa.me/+51923063096?text=Hola,%20te%20gustaría%20obtener%20más%20información?" target="_blank"><i class='bx bxl-whatsapp'></i>+51 923063096</a>
+                                <a href="mailto:createweb.systems@gmail.com" target="_blank"><i class='bx bx-envelope'></i>createweb.systems@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row links">
+                    <div class="col-md-4" style="text-align: center;border-right: 1px solid #afafaf;">
+                        <div class="terms">
+                            <a href="terminos.html" target="_blank">
+                                <h4>Términos y Condiciones</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" style="text-align: center;border-right: 1px solid #afafaf;"">
+                    <div class=" privacy">
+                        <a href="politica.html" target="_blank">
+                            <h4>Politica de Privacidad</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4" style="text-align: center;">
+                    <div class="help">
+                        <a href="https://wa.me/+51923063096?text=Hola,%20te%20gustaría%20obtener%20más%20información?" target="_blank"><h4>Ayuda</h4></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            var precarga = document.getElementById("precarga");
+            var principal = document.getElementById("principal");
+
+            setTimeout(function () {
+                precarga.style.display = "none";
+                principal.style.display = "block";
+
+                AOS.init();
+
+            }, 3600);
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script>
+        function filterSelection(category) {
+            var elements = document.getElementsByClassName('filterDiv');
+            if (category == 'all') category = '';
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.remove('show');
+                if (elements[i].className.indexOf(category) > -1) {
+                    elements[i].classList.add('show');
+                }
+            }
+        }
+        filterSelection('all');
+    </script>
+    <script>
+        document.getElementById("load-more-btn").addEventListener("click", function () {
+            document.getElementById("hidden-products-row").style.display = "flex";
+            this.style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>
