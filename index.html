@@ -42,14 +42,6 @@
 </head>
 
 <body>
-    <div id="precarga">
-        <p class="texto-carga">
-            <span><img class="logo-load" style="width: 150px;" src="assets/images/logotipo.png"
-                    alt=""></span><span>C</span><span>W</span><span>S</span>
-        </p>
-    </div>
-
-    <div id="principal" style="padding: 0; margin: 0; width: 100%;display: none;">
         <div class="header-menu">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-dark p-4 container-menu">
@@ -769,7 +761,6 @@
             </div>
             <hr>
         </footer>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -796,20 +787,6 @@
 
         closeMenu.addEventListener('click', () => {
             mobileMenu.classList.remove('menu-open');
-        });
-    </script>
-    <script>
-        window.addEventListener("load", function () {
-            var precarga = document.getElementById("precarga");
-            var principal = document.getElementById("principal");
-
-            setTimeout(function () {
-                precarga.style.display = "none";
-                principal.style.display = "block";
-
-                AOS.init();
-
-            }, 3600);
         });
     </script>
 </body>
